@@ -1,3 +1,5 @@
+import React from 'react'
+
 // Styling
 import classes from './Card.module.scss';
 

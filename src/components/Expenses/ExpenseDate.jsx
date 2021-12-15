@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 // Styling
 import classes from './ExpenseDate.module.scss';

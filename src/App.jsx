@@ -1,5 +1,6 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import ExpenseList from './components/Expenses/ExpenseList';
+import NewExpense from './components/NewExpense/NewExpense';
 
 export default function App() {
   const expenses = [
@@ -11,7 +12,7 @@ export default function App() {
 
   return (
     <Fragment>
-      <h2>Let's get started!</h2>
+      <NewExpense />
       <ExpenseList expenses={expenses} />
     </Fragment>
   );
