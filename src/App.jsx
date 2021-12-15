@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import ExpenseList from './components/ExpenseList';
+import ExpenseList from './components/Expenses/ExpenseList';
 
 export default function App() {
   const expenses = [
