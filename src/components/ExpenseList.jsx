@@ -1,9 +1,12 @@
 import ExpenseItem from './ExpenseItem';
+import Card from './Card';
+
+// Styling
 import classes from './ExpenseList.module.scss'
 
 export default function ExpenseList({ expenses }) {
   return (
-    <div className={classes.expenses}>
+    <Card className={classes.expenses}>
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
@@ -24,6 +27,6 @@ export default function ExpenseList({ expenses }) {
         amount={expenses[3].amount}
         date={expenses[3].date}
       />
-    </div>
+    </Card>
   );
 }

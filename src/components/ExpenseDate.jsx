@@ -1,4 +1,6 @@
 import { Fragment } from 'react';
+
+// Styling
 import classes from './ExpenseDate.module.scss';
 
 export default function ExpenseDate({ date }) {
