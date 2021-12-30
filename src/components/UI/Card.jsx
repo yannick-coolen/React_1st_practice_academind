@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-// Styling
-import classes from './Card.module.scss';
+import './Card.css';
 
-export default function Card({ children, className }) {
-  const classValue = 'card ' + className;
-  return <div className={`${classes.Card} ${classValue}`}>{children}</div>;
-}
+export default function Card({ className, children}) {
+  const classes = `card ${className}`;
+
+  return <div className={classes}>{children}</div>;
+};
+
