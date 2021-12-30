@@ -11,8 +11,8 @@ export default function ExpenseDate({ date }) {
   return (
     <Fragment>
       <div className={classes.expense_date}>
-        <div className={classes.expense_date__day}>{day}</div>
         <div className={classes.expense_date__month}>{month}</div>
+        <div className={classes.expense_date__day}>{day}</div>
         <div className={classes.expense_date__year}>{year}</div>
       </div>
     </Fragment>
