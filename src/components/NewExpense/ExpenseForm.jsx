@@ -6,6 +6,7 @@ export default function ExpenseForm({ onSaveExpenseData }) {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
+  const [showExpenseForm, setShowExpenseForm] = useState(false);
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -32,7 +33,21 @@ export default function ExpenseForm({ onSaveExpenseData }) {
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
+
+    setShowExpenseForm(false);
   };
+
+  const toggleShowExpanseHandler = () => {
+    if (showExpenseForm) {
+      setShowExpenseForm(false);
+    } else {
+      setShowExpenseForm(true);
+    }
+  };
+
+  if (!showExpenseForm) {
+    return <button onClick={toggleShowExpanseHandler}>Add new Expense</button>;
+  }
 
   return (
     <form onSubmit={submitHandler}>
@@ -67,8 +82,9 @@ export default function ExpenseForm({ onSaveExpenseData }) {
         </div>
       </div>
       <div className='new-expense__actions'>
+        <button onClick={toggleShowExpanseHandler}>Cancel</button>
         <button type='submit'>Add Expense</button>
       </div>
     </form>
   );
-};
+}
